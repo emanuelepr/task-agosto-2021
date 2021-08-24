@@ -1,3 +1,4 @@
+/*
 package com.teamsisalamarisep.taskagosto2021.dao;
 
 import com.teamsisalamarisep.taskagosto2021.model.Auto;
@@ -24,3 +25,4 @@ public interface AutoDao {
     int updateAutoByID(UUID id, Auto auto);
 
 }
+*/

@@ -1,22 +1,31 @@
 package com.teamsisalamarisep.taskagosto2021.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.UUID;
+import java.time.LocalDateTime;
 
+@Data
 @AllArgsConstructor
-@Getter
+@Document
 public class Auto {
-    @JsonProperty("id")
-    private UUID id;
-    @JsonProperty("targa")
+    @Id
+    private String id;
+    //@Indexed(unique = true)
     private String targa;
-    @JsonProperty("marca")
     private String marca;
-    @JsonProperty("modello")
     private String modello;
-    @JsonProperty("anno")
     private Integer anno;
+    private LocalDateTime dataCreazione;
+
+    public Auto(String targa, String marca, String modello, Integer anno, LocalDateTime dataCreazione) {
+        this.targa = targa;
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.dataCreazione = dataCreazione;
+    }
 }

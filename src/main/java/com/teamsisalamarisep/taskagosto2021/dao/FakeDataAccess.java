@@ -1,3 +1,4 @@
+/*
 package com.teamsisalamarisep.taskagosto2021.dao;
 
 import com.teamsisalamarisep.taskagosto2021.model.Auto;
@@ -57,3 +58,4 @@ public class FakeDataAccess implements AutoDao{
                 .orElse(0);
     }
 }
+*/
